@@ -35,6 +35,10 @@ public class Anggota {
             System.out.println("Maaf, angsuran harus minimal 10% dari jumlah pinjaman saat ini.");
         } else {
             jumlahPinjaman -= uang;
+            if (jumlahPinjaman < 0) {
+                jumlahPinjaman= 0;
+            }
         }
+
     }
 }
