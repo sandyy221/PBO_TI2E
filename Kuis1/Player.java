@@ -7,6 +7,12 @@ class Player extends Character {
         super(name, health, attackPower);
         this.level = level;
     }
+    public void heal() {
+    int healAmount = 20;
+    setHealth(getHealth() + healAmount);
+    System.out.println(getName() + " heals +" + healAmount + 
+    " HP! kondisi kesehatan: " + getHealth());
+}
     @Override
     public void attack(Character target) {
         int damage = (int) (super.getHealth() * 0.1) + level;
